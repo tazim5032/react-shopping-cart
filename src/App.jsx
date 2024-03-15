@@ -44,7 +44,7 @@ function App() {
 
         </div>
 
-        <div className="mt-6 lg:mt-0 bg-yellow-400 shadow-xl lg:w-1/3 rounded-xl h-screen">
+        <div className="mt-6 lg:mt-0 bg-yellow-400 shadow-xl lg:w-1/3 rounded-xl pb-4">
           
           <h1 className='text-3xl font-bold text-center my-6'>Your Cart</h1>
 
