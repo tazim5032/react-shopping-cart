@@ -31,7 +31,7 @@ function App() {
     <>
       <div className="main-container lg:flex justify-between mx-[6%] mt-6">
 
-        <div className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  lg:w-2/3">
+        <div className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:w-2/3">
           {
             products.map(pd => <SingleProduct key={pd.id} product={pd}
             handleCart={handleCart}></SingleProduct>)
@@ -41,12 +41,22 @@ function App() {
 
         <div className="mt-6 lg:mt-0 bg-yellow-400 shadow-xl lg:w-1/3 rounded-xl h-screen">
           
-          <h1 className='text-3xl font-bold text-center mb-6'>Your Cart</h1>
+          <h1 className='text-3xl font-bold text-center my-6'>Your Cart</h1>
 
           <div className='flex justify-around'>
             <h1 className='text-xl font-medium'>Title</h1>
             <h1 className='text-xl font-medium'>Price</h1>
-            
+          </div>
+
+          <div className="cart-info">
+            {
+              cart.map((item,idx) =>(
+                <div key={idx} className='flex justify-around mt-4'>
+                  <h1 className='text-xl font-medium'>{item.title.slice(0,10)}</h1>
+                  <h1 className='text-xl font-medium'>${item.price}</h1>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
